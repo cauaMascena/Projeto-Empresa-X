@@ -15,4 +15,6 @@ $novoFuncionario = [
 
 adicionarFuncionario("./dados/empresaX.json", $novoFuncionario);
 
+deletarFuncionario("./dados/empresaX.json", $funcionarios);
+
 header("location: index.php");
