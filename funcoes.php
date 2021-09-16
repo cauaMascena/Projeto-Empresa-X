@@ -47,14 +47,18 @@ $json = json_encode(array_values ($funcionarios));
 file_put_contents($nomeArquivo, $json);
 }
 
-// function acrescentarFuncionario($funcionarios) {
-//    $arquivo = file_put_contents($id, 
-//    $first_name, 
-//    $last_name,
-//    $email, 
-//    $gender, 
-//    $ip_address);
+//Função buscar funcionario por id 
 
-//     $jsonArray = json_decode($arquivo)
-// }
+function buscarFuncionarioPorId ($nomeArquivo, $idFuncionario) {
 
+    $funcionarios = lerArquivo($nomeArquivo);
+
+    foreach ($funcionarios as $funcionario) {
+
+        if ($funcionario->id == $idFuncionario) {
+            
+return $funcionario;
+        
+        }
+    }
+}

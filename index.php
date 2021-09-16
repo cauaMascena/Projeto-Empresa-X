@@ -93,7 +93,7 @@ if (isset($_GET["filtro"]) && $_GET["filtro"] != "") {
                     <th>
                         <?= $funcionario->department ?>
                     </th>
-                    <th><a href="index.html"><button>&#9998;</button></a></th>
+                    <th><button onclick="editar(<?= $funcionario-> id ?>)">&#9998;</button></th>
                     <th><button onclick="deletar(<?= $funcionario->id ?>)">&#10006;</button></th>
                 </tr>
             <?php
